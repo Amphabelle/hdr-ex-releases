@@ -8,20 +8,22 @@ faster throws with anti-chaingrab protection, a reverse ledge trump, and global 
 ## Install (emulator)
 
 **With the launcher (recommended).** Download `HDR-EX-Launcher-Setup-*.exe` from the
-[launcher release](https://github.com/Amphabelle/hdr-ex-releases/releases/tag/launcher-v0.1.0), install it and
+[launcher release](https://github.com/Amphabelle/hdr-ex-releases/releases/tag/launcher-v0.2.0), install it and
 start it:
 
 1. select your emulator (`eden.exe` for Eden);
 2. confirm the SD card folder (Eden's `sdmc` folder is found automatically);
 3. optionally select your Smash Ultimate game file, so that **Play** starts the game directly;
-4. click **Install HDR EX** (about 1.5 GB to download).
+4. click **Install HDR EX**: it downloads everything as one zip (about 1.5 GB) and extracts it by itself.
 
 **Update.** The launcher shows **Update (!)** when a new version is out, and only downloads the packages
 that changed.
 
-**By hand.** Open `hdr-ex-manifest.json` in the [latest release](https://github.com/Amphabelle/hdr-ex-releases/releases/latest),
-download every zip it lists and extract them all into your emulator's `sdmc` folder (each zip already contains
-`atmosphere/...` or `ultimate/mods/...`).
+**Repair.** *Tools > Repair Install* downloads and reinstalls everything.
+
+**By hand.** Download `hdr-ex-full.zip` from the [latest release](https://github.com/Amphabelle/hdr-ex-releases/releases/latest)
+and extract it into your emulator's `sdmc` folder (it already contains `atmosphere/...` and `ultimate/...`).
+If `hdr-ex-manifest.json` lists a package newer than the versions under `full`, extract that package's zip on top.
 
 You need Super Smash Bros. Ultimate with the same game update as HDR v0.50.5 (the latest one). HDR EX replaces vanilla HDR (they use the same
 `ultimate/mods/hdr` folder).
@@ -34,6 +36,9 @@ You need Super Smash Bros. Ultimate with the same game update as HDR v0.50.5 (th
 | hdr-ex     | the HDR EX plugin and parameters (`ultimate/mods/hdr`)       |
 | hdr-assets | HDR's assets (`ultimate/mods/hdr-assets`)                     |
 | hdr-stages | HDR's stages (`ultimate/mods/hdr-stages`)                     |
+
+Every release is built and checked on GitHub Actions: the HDR EX plugin is compiled from source, and the
+assets, stages and plugins come from HDR's official v0.50.5 package, each file checked against HDR's published hashes.
 
 ## Credits
 
